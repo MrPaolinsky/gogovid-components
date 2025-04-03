@@ -1,10 +1,11 @@
 import "./style.css";
+import "@gogovid/core/dist/styles.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
-import {test} from "@gogovid/core"
 import { setupCounter } from "./counter.ts";
+import { test } from "@gogovid/core";
 
-test();
+console.log(test());
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">

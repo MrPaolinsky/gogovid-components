@@ -1,4 +1,4 @@
-import dashjs, { MediaPlayerClass } from "dashjs";
+import { MediaPlayerClass, MediaPlayer } from "dashjs";
 import { getGogoEnv } from "../gogo";
 
 export class DashVideoError extends Error {
@@ -23,7 +23,7 @@ export function newPlayer(
 
     try {
         const vEl = getVideoElement(vId);
-        const player = dashjs.MediaPlayer().create();
+        const player = MediaPlayer().create();
         player.initialize(vEl, env.gogoUrl, autoplay);
         return {
             player,
